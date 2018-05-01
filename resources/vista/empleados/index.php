@@ -108,7 +108,7 @@
                     <?php
                     include "../resources/vista/empleados/crearempleado.php";
                     ?>
-                    <button type="button" class="btn btn-round btn-info">Exportar</button>
+                    <button type="button" class="btn btn-round btn-info" ><a href="pdf.php">Exportar</a></button>
                 </div>  
                                                     <div class="card-body">
                                                         <div class="table-responsive">
