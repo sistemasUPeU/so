@@ -59,7 +59,6 @@ class ComposerStaticInit166bf42d04155d161a73ec93324b5467
         'D' => 
         array (
             'Dompdf\\' => 7,
-            'Doctrine\\Common\\Inflector\\' => 26,
         ),
         'A' => 
         array (
@@ -192,10 +191,6 @@ class ComposerStaticInit166bf42d04155d161a73ec93324b5467
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
-        'Doctrine\\Common\\Inflector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
-        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -223,6 +218,13 @@ class ComposerStaticInit166bf42d04155d161a73ec93324b5467
             'Sabberworm\\CSS' => 
             array (
                 0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
             ),
         ),
     );

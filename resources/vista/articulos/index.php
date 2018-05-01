@@ -190,13 +190,18 @@
             },
             "bProcessing": true,
             "bServerSide": true,
+            "searching": true,
             "bInfo": true,
                 "ajax":{"url":"categoriaController.php","dataSrc":""},
+                "type":"POST",
                 "columns": [
                     { "data": "idcategoria" },
                     { "data": "nombrecat" },
                     { "data": "estado" },
                 ]
+
+               
             }
+            
         );
     </script>
