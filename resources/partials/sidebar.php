@@ -41,6 +41,12 @@
                             <p>Clientes</p>
                         </a>
                     </li>
+                     <li>
+                        <a href="../public/pedidoindex.php">
+                            <i class="material-icons">hourglass_full</i>
+                            <p>Pedidos</p>
+                        </a>
+                    </li>
                     <li class="active-pro">
                         <a href="upgrade.html">
                             <i class="material-icons">unarchive</i>
