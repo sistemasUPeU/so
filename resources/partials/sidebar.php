@@ -4,55 +4,62 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-            <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
-                    D' Vinita Yviso
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text">
+            D' Vinita Yviso
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="active">
+                <a href="../public/index.php">
+                    <i class="material-icons">dashboard</i>
+                    <p>Inicio</p>
                 </a>
-            </div>
-            <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="../public/index.php">
-                            <i class="material-icons">dashboard</i>
-                            <p>Inicio</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../public/ventaindex.php">
-                            <i class="material-icons">person</i>
-                            <p>Ventas</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../public/articuloindex.php">
-                            <i class="material-icons">content_paste</i>
-                            <p>Articulos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../public/empleados.php">
-                            <i class="material-icons">library_books</i>
-                            <p>Empleados</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../public/clienteindex.php">
-                            <i class="material-icons">bubble_chart</i>
-                            <p>Clientes</p>
-                        </a>
-                    </li>
-                     <li>
-                        <a href="../public/pedidoindex.php">
-                            <i class="material-icons">hourglass_full</i>
-                            <p>Pedidos</p>
-                        </a>
-                    </li>
-                    <li class="active-pro">
-                        <a href="upgrade.html">
-                            <i class="material-icons">unarchive</i>
-                            <p>Configuración</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            </li>
+            <li>
+                <a href="../public/ventaindex.php">
+                    <i class="material-icons">person</i>
+                    <p>Ventas</p>
+                </a>
+            </li>
+            <li>
+                <a href="../public/articuloindex.php">
+                    <i class="material-icons">content_paste</i>
+                    <p>Articulos</p>
+                </a>
+            </li>
+            <li>
+                <a href="../public/empleados.php">
+                    <i class="material-icons">library_books</i>
+                    <p>Empleados</p>
+                </a>
+            </li>
+            <li>
+                <a href="../public/clienteindex.php">
+                    <i class="material-icons">bubble_chart</i>
+                    <p>Clientes</p>
+                </a>
+            </li>
+            <li>
+                <a href="../public/pedidoindex.php">
+                    <i class="material-icons">hourglass_full</i>
+                    <p>Pedidos</p>
+                </a>
+            </li>
+            <li>
+                <a href="../public/vendedorindex.php">
+                    <i class="material-icons">add_shopping_cart
+                    l</i>
+                    <p>Vendedor</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="upgrade.html">
+                    <i class="material-icons">unarchive</i>
+                    <p>Configuración</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
