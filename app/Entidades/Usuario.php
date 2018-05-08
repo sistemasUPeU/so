@@ -4,7 +4,7 @@ namespace App\Entidades;
 use Illuminate\Auth\Authenticatable as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class usuario extends Model implements Authenticatable {
+class usuario extends Model {
     protected $table = 'usuarios';
     protected $primaryKey='idusuario';
     protected $fillable = [

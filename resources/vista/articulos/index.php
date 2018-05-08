@@ -21,7 +21,7 @@
                         <a class="navbar-brand" href="#"> Articulos </a>
                     </div>
                     <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="material-icons">dashboard</i>
@@ -30,33 +30,17 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">notifications</i>
-                                    <span class="notification">5</span>
-                                    <p class="hidden-lg hidden-md">Notifications</p>
+                                    <i class="material-icons">person</i>
+                                    <p class="hidden-lg hidden-md">Opciones</p>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Mike John responded to your email</a>
+                                        <a href="#">Editar Usuario</a>
                                     </li>
                                     <li>
-                                        <a href="#">You have 5 new tasks</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">You're now friend with Andrew</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another Notification</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another One</a>
+                                        <a href="logout.php">Cerrar Sesión</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">person</i>
-                                    <p class="hidden-lg hidden-md">Profile</p>
-                                </a>
                             </li>
                         </ul>
                         <form class="navbar-form navbar-right" role="search">
@@ -129,79 +113,85 @@
   include "../resources/partials/scripts.php";
 ?>
 
+<script>
+    $(document).ready(function() {
+    $('#artitables').DataTable( {
+        "ajax": {
+            "url": "articulocontroller.php",
+            "dataSrc": ""
+        },
+        "columns": [
+            { "data": "codigo" },
+            { "data": "nombre"},
+            { "data": "descripcion"},
+            { "data": "volumen"},
+            { "data": "preciov_actual"},
+            { "data": "nombrecat" },
+            { "data": "nombremedida" },
+            {
+            "targets": -1,
+            "data": null,
+            "defaultContent": ""
+            }
+        ]
+    } );
+
+    var table = $('#artitables').DataTable();
+    
+    // Edit record
+    table.on('click', '.edit', function() {
+        $tr = $(this).closest('tr');
+
+        var data = table.row($tr).data();
+        alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
+    });
+
+    // Delete a record
+    table.on('click', '.remove', function(e) {
+        $tr = $(this).closest('tr');
+        table.row($tr).remove().draw();
+        e.preventDefault();
+    });
+} );
+    </script>
+<script>
+    $(document).ready(function() {
+    $('#datatables2').DataTable( {
+        "ajax": {
+            "url": "categoriacontroller.php",
+            "dataSrc": ""
+        },
+        "columns": [
+            { "data": "idcategoria" },
+            { "data": "nombrecat" },
+            { "data": "estado" },
+            {
+            "targets": -1,
+            "data": null,
+            "defaultContent": ""
+            }
+        ]
+    } );
+
+    var table = $('#datatables2').DataTable();
+    
+    // Edit record
+    table.on('click', '.edit', function() {
+        $tr = $(this).closest('tr');
+
+        var data = table.row($tr).data();
+        alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
+    });
+
+    // Delete a record
+    table.on('click', '.remove', function(e) {
+        $tr = $(this).closest('tr');
+        table.row($tr).remove().draw();
+        e.preventDefault();
+    });
+} );
+    </script>
 
 
 </html>
-<script type="text/javascript">
 
-    $(document).ready(function() {
-        $('#artitables').DataTable({
-            "pagingType": "full_numbers",
-            "lengthMenu": [
-                [10, 25, 50, -1],
-                [10, 25, 50, "All"]
-            ],
-            responsive: true,
-            language: {
-                search: "_INPUT_",
-                searchPlaceholder: "Buscar...",
-            }
-    
-        });
-    
-    
-        var table = $('#datatables').DataTable();
-    
-        // Edit record
-        table.on('click', '.edit', function() {
-            $tr = $(this).closest('tr');
-    
-            var data = table.row($tr).data();
-            alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
-        });
-    
-        // Delete a record
-        table.on('click', '.remove', function(e) {
-            $tr = $(this).closest('tr');
-            table.row($tr).remove().draw();
-            e.preventDefault();
-        });
-    
-        //Like record
-        table.on('click', '.like', function() {
-            alert('You clicked on Like button');
-        });
-    
-        $('.card .material-datatables label').addClass('form-group');
-    });
-    
-    </script>
-    <script>
-         $('#datatables2').DataTable({
-            "pagingType": "full_numbers",
-            "lengthMenu": [
-                [5, 25, 50, -1],
-                [5, 25, 50, "All"]
-            ],
-            responsive: true,
-            language: {
-                search: "_INPUT_",
-                searchPlaceholder: "Buscar...",
-            },
-            "bProcessing": true,
-            "bServerSide": true,
-            "searching": true,
-            "bInfo": true,
-                "ajax":{"url":"categoriaController.php","dataSrc":""},
-                "type":"POST",
-                "columns": [
-                    { "data": "idcategoria" },
-                    { "data": "nombrecat" },
-                    { "data": "estado" },
-                ]
-
-               
-            }
-            
-        );
-    </script>

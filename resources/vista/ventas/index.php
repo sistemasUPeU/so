@@ -22,6 +22,7 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="material-icons">dashboard</i>
@@ -30,34 +31,20 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">notifications</i>
-                                    <span class="notification">5</span>
-                                    <p class="hidden-lg hidden-md">Notifications</p>
+                                    <i class="material-icons">person</i>
+                                    <p class="hidden-lg hidden-md">Opciones</p>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Mike John responded to your email</a>
+                                        <a href="#">Editar Usuario</a>
                                     </li>
                                     <li>
-                                        <a href="#">You have 5 new tasks</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">You're now friend with Andrew</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another Notification</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another One</a>
+                                        <a href="logout.php">Cerrar Sesión</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">person</i>
-                                    <p class="hidden-lg hidden-md">Profile</p>
-                                </a>
-                            </li>
+                        </ul>
+                         
                         </ul>
                         <form class="navbar-form navbar-right" role="search">
                             <div class="form-group  is-empty">
@@ -118,9 +105,11 @@
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="profile">
                                         <div class="row">
+                                               
                                            <?php
                                              include "../resources/vista/ventas/reporteprimero.php";
                                            ?>
+                                           
                                         </div>
                                         <div class="tab-pane" id="messages">
                                             <div class="row">
@@ -141,48 +130,64 @@
 <?php
   include "../resources/partials/scripts.php";
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <script>
-var data = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    series: [
-    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-  ]
-};
-
-var options = {
-  seriesBarDistance: 15
-};
-
-var responsiveOptions = [
-  ['screen and (min-width: 641px) and (max-width: 1024px)', {
-    seriesBarDistance: 10,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value;
-      }
-    }
-  }],
-  ['screen and (max-width: 640px)', {
-    seriesBarDistance: 5,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value[0];
-      }
-    }
-  }]
-];
-
-new Chartist.Bar('#myChart', data, options, responsiveOptions);
-</script>
-  <script type="text/javascript">
-
     $(document).ready(function(){
-    
-      //init DateTimePickers
-      md.initFormExtendedDatetimepickers();
-    
-    });
-    
-    </script>
+        $.ajax({
+            url: "ventaController.php",
+            type: "GET",
+            success : function (data){
+                console.log(data);
+
+                var score = {
+                    monto_favor: [],
+                    fecha: []
+                };
+                var len = data.length;
+
+                for (var i; i < len; i++){
+                    if (data[i].idcliente = 1){
+                        score.monto_favor.push(data[i].score);
+                    }
+                    else if (data[i].idusuario = 1){
+                        score.fecha.push(data[i].score);
+                    }
+                }
+                console.log(score);
+
+                var ctx = $("#myChart");
+                var data = {labels: [],
+                 datasets : [{
+                     label: "Monto",
+                     data: score.monto_favor,
+                     backgroundColor: "blue",
+                     fills: false,
+                     lineTension: 0,
+                     pointRadius : 5
+                 },{
+						label : "IG",
+						data : score.fecha,
+						backgroundColor : "green",
+						borderColor : "lightgreen",
+						fill : false,
+						lineTension : 0,
+						pointRadius : 5
+					}
+                
+                ]
+                };
+                var chart = new Chart(ctx,{
+                   type: "line",
+                   data: data,
+                   options: {} 
+                });
+            },
+            error : function (data) {
+                console.log(data);
+
+            }
+        });
+    })
+</script>
+ 
 </html>

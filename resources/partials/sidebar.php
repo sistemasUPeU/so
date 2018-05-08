@@ -1,3 +1,4 @@
+
 <div class="sidebar" data-color="blue" data-image="../resources/img/sidebar-1.jpg">
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
@@ -5,14 +6,19 @@
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text">
+        <a href="" class="simple-text">
             D' Vinita Yviso
         </a>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
+        <?php 
+        session_start();
+        $rol = $_SESSION['c_rol'];
+        if ($rol == 1){
+        ?>
             <li class="active">
-                <a href="../public/index.php">
+                <a href="../public/main.php">
                     <i class="material-icons">dashboard</i>
                     <p>Inicio</p>
                 </a>
@@ -41,6 +47,14 @@
                     <p>Clientes</p>
                 </a>
             </li>
+            <?php 
+        };
+        ?>
+
+         <?php 
+             $rol = $_SESSION['c_rol'];
+             if ($rol == 2){
+         ?>
             <li>
                 <a href="../public/pedidoindex.php">
                     <i class="material-icons">hourglass_full</i>
@@ -54,6 +68,9 @@
                     <p>Vendedor</p>
                 </a>
             </li>
+            <?php 
+             };
+            ?>
             <li class="active-pro">
                 <a href="upgrade.html">
                     <i class="material-icons">unarchive</i>

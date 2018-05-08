@@ -70,7 +70,7 @@
                     	      </div>
                     	      <div class="modal-footer justify-content-center">
                                     <input type="submit" name="submit" value="Registrar" class="btn btn-info btn-round" data-dismiss="modal"/>
-
+                    	      </div>
                                 </form> 
                     	      </div>
                     	    </div>

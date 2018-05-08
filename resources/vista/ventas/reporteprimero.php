@@ -9,7 +9,7 @@
                   </h4>
                 </div>
                 <div class="card-body">
-                  <div id="myChart" class="ct-chart"></div>
+                  <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
             </div>
         </div>

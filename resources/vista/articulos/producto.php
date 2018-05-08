@@ -4,10 +4,14 @@
                               <div class="card">
                                 <div class="card-header card-header-primary card-header-icon">
                                   <div class="card-icon">
-                                    <button><i class="material-icons">assignment</i></button>
+                                  <button class="btn btn-round btn-primary" data-toggle="modal"
+                    data-target="#productModal"><i class="material-icons">assignment</i></button>
                                   </div>
                                   <h4 class="card-title">Lista de Articulos</h4>
                                 </div>
+                                <?php
+                                 include "../resources/vista/articulos/crearproducto.php";
+                                ?>
                                   <div class="card-body">
                                       <div class="toolbar">
                                           <!--        Here you can write extra buttons/actions for the toolbar              -->
@@ -17,21 +21,25 @@
                                       <table id="artitables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                                           <thead>
                                               <tr>
-                                                <th>Nombre Producto</th>
-                                                <th>Categoria</th>
+                                                <th>Codigo</th>
+                                                <th>Nombre</th>
                                                 <th>Cantidad</th>
                                                 <th>Precio</th>
                                                 <th>Importe</th>
+                                                <th>Categoria</th>
+                                                <th>Medida</th>
                                                   <th class="disabled-sorting text-right">Acción</th>
                                               </tr>
                                           </thead>
                                           <tfoot>
                                               <tr>
-                                                  <th>Nombre Producto</th>
-                                                  <th>Categoria</th>
+                                                  <th>Codigo</th>
+                                                  <th>Nombre</th>
                                                   <th>Cantidad</th>
                                                   <th>Precio</th>
                                                   <th>Importe</th>
+                                                  <th>Categoria</th>
+                                                <th>Medida</th>
                                                   <th class="text-right">Acción</th>
                                               </tr>
                                           </tfoot>
@@ -57,3 +65,5 @@
                       </div> <!-- end row -->
                     
                                           </div>
+
+                                          
