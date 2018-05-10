@@ -7,13 +7,14 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
-    <link rel="icon" href="../assets/img/favicon.png">
+    <!-- <link rel="apple-touch-icon" href="../assets/img/apple-icon.png"> -->
+   <!--  <link rel="icon" href="../assets/img/favicon.png"> -->
     <title>
-        Login &#45; Material Kit PRO by Creative Tim
+        Login
     </title>
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Canonical SEO -->
+    <link rel="shortcut icon" href="http://www.comercialjosequintero.com/wp-content/uploads/2016/07/vino.png">
     <link rel="canonical" href="https://www.creative-tim.com/product/material-kit-pro" />
     <!--  Social tags      -->
     <meta name="keywords" content="creative tim, html kit, html css template, web template, bootstrap, css3 template, frontend, responsive bootstrap template, bootstrap 4 ui kit, premium bootstrap kit, responsive ui kit">
@@ -73,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="input-group">
+                                <div class="input-group ">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="material-icons">face</i>
@@ -87,7 +88,7 @@
                                             <i class="material-icons">lock_outline</i>
                                         </span>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="Contraseña..." name="pass">
+                                    <input type="password"   class="form-control" placeholder="Contraseña..." name="pass">
                                 </div>
                                 <!-- If you want to add a checkbox to this form, uncomment this code
 
