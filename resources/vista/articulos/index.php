@@ -116,6 +116,16 @@
 <script>
     $(document).ready(function() {
     $('#artitables').DataTable( {
+        "pagingType": "full_numbers",
+        "lengthMenu": [
+            [5, 25, 50, -1],
+            [5, 25, 50, "All"]
+        ],
+        "responsive": "true",
+        "language": {
+            "search": "_INPUT_",
+            "searchPlaceholder": "Buscar Producto...",
+        },
         "ajax": {
             "url": "articulocontroller.php",
             "dataSrc": ""
@@ -131,7 +141,7 @@
             {
             "targets": -1,
             "data": null,
-            "defaultContent": ""
+            "defaultContent": "<button class='btn btn-info btn-sm'>Ver</button>"+"<button class='btn btn-danger btn-sm'>Eliminar</button>"
             }
         ]
     } );
@@ -157,10 +167,16 @@
 <script>
     $(document).ready(function() {
     $('#datatables2').DataTable( {
+        "responsive": "true",
+        "language": {
+            "search": "_INPUT_",
+            "searchPlaceholder": "Buscar Categoria",
+        },
         "ajax": {
             "url": "categoriacontroller.php",
             "dataSrc": ""
         },
+        
         "columns": [
             { "data": "idcategoria" },
             { "data": "nombrecat" },
@@ -168,27 +184,11 @@
             {
             "targets": -1,
             "data": null,
-            "defaultContent": ""
+            "defaultContent": "<button class='btn btn-info btn-sm'>Ver</button>"+"<button class='btn btn-danger btn-sm'>Eliminar</button>",
             }
         ]
     } );
 
-    var table = $('#datatables2').DataTable();
-    
-    // Edit record
-    table.on('click', '.edit', function() {
-        $tr = $(this).closest('tr');
-
-        var data = table.row($tr).data();
-        alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
-    });
-
-    // Delete a record
-    table.on('click', '.remove', function(e) {
-        $tr = $(this).closest('tr');
-        table.row($tr).remove().draw();
-        e.preventDefault();
-    });
 } );
     </script>
 

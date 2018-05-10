@@ -28,7 +28,7 @@
                                                 <th>Importe</th>
                                                 <th>Categoria</th>
                                                 <th>Medida</th>
-                                                  <th class="disabled-sorting text-right">Acción</th>
+                                                <th>Acción</th>
                                               </tr>
                                           </thead>
                                           <tfoot>
@@ -39,8 +39,8 @@
                                                   <th>Precio</th>
                                                   <th>Importe</th>
                                                   <th>Categoria</th>
-                                                <th>Medida</th>
-                                                  <th class="text-right">Acción</th>
+                                                  <th>Medida</th>
+                                                  <th>Acción</th>
                                               </tr>
                                           </tfoot>
                                           <tbody>

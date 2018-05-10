@@ -10,26 +10,9 @@
     <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
     <link rel="icon" href="../assets/img/favicon.png">
     <title>
-        Login &#45; Material Kit PRO by Creative Tim
+        Login &#45; D' Vinita
     </title>
-    <!-- Extra details for Live View on GitHub Pages -->
-    <!-- Canonical SEO -->
-    <link rel="canonical" href="https://www.creative-tim.com/product/material-kit-pro" />
-    <!--  Social tags      -->
-    <meta name="keywords" content="creative tim, html kit, html css template, web template, bootstrap, css3 template, frontend, responsive bootstrap template, bootstrap 4 ui kit, premium bootstrap kit, responsive ui kit">
-    <meta name="description" content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Material Kit PRO by Creative Tim">
-    <meta itemprop="description" content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design.">
-    <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">
-    <!-- Open Graph data -->
-    <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Material Kit PRO by Creative Tim" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://demos.creative-tim.com/material-kit-pro/presentation.html" />
-    <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg" />
-    <meta property="og:description" content="Start Your Development With A Badass Bootstrap 4 UI Kit inspired by Material Design." />
-    <meta property="og:site_name" content="Creative Tim" />
+  
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />

@@ -33,7 +33,7 @@ if ($resultado = mysqli_fetch_array($proceso)) {
         header("location: main.php");
     }
 } else {
-    print "<script>alert(\"Usuario Incorrecto\");</script>";
+    print "</script><script>location.href='../public/index.php';</script>";
 }
 ?>
 

@@ -130,64 +130,37 @@
 <?php
   include "../resources/partials/scripts.php";
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $.ajax({
-            url: "ventaController.php",
-            type: "GET",
-            success : function (data){
-                console.log(data);
 
-                var score = {
-                    monto_favor: [],
-                    fecha: []
-                };
-                var len = data.length;
-
-                for (var i; i < len; i++){
-                    if (data[i].idcliente = 1){
-                        score.monto_favor.push(data[i].score);
-                    }
-                    else if (data[i].idusuario = 1){
-                        score.fecha.push(data[i].score);
-                    }
+ <script>
+            $(document).ready(mostrarResultados(2018));  
+                function mostrarResultados(year){
+                    $('.resultados').html('<canvas id="grafico"></canvas>');
+                    $.ajax({
+                        type: 'POST',
+                        url: 'chartController.php',
+                        data: 'year='+year,
+                        dataType: 'JSON',
+                        success:function(response){
+                            var Datos = {
+                                    labels : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                                    datasets : [
+                                        {
+                                            fillColor : 'rgba(91,228,146,0.6)', //COLOR DE LAS BARRAS
+                                            strokeColor : 'rgba(57,194,112,0.7)', //COLOR DEL BORDE DE LAS BARRAS
+                                            highlightFill : 'rgba(73,206,180,0.6)', //COLOR "HOVER" DE LAS BARRAS
+                                            highlightStroke : 'rgba(66,196,157,0.7)', //COLOR "HOVER" DEL BORDE DE LAS BARRAS
+                                            data : response
+                                        }
+                                    ]
+                                }
+                            var contexto = document.getElementById('grafico').getContext('2d');
+                            window.Barra = new Chart(contexto).Bar(Datos, { responsive : true });
+                            Barra.clear();
+                        }
+                    });
+                    return false;
                 }
-                console.log(score);
+    </script>
 
-                var ctx = $("#myChart");
-                var data = {labels: [],
-                 datasets : [{
-                     label: "Monto",
-                     data: score.monto_favor,
-                     backgroundColor: "blue",
-                     fills: false,
-                     lineTension: 0,
-                     pointRadius : 5
-                 },{
-						label : "IG",
-						data : score.fecha,
-						backgroundColor : "green",
-						borderColor : "lightgreen",
-						fill : false,
-						lineTension : 0,
-						pointRadius : 5
-					}
-                
-                ]
-                };
-                var chart = new Chart(ctx,{
-                   type: "line",
-                   data: data,
-                   options: {} 
-                });
-            },
-            error : function (data) {
-                console.log(data);
-
-            }
-        });
-    })
-</script>
  
 </html>

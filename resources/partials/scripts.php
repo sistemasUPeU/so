@@ -1,4 +1,5 @@
 <script src="../resources/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
 <script src="../resources/js/popper.min.js" type="text/javascript"></script>
 <script src="../resources/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../resources/js/material.min.js" type="text/javascript"></script>

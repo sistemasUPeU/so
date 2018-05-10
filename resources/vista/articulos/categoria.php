@@ -19,18 +19,18 @@
                   <table id="datatables2" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                       <thead>
                           <tr>
+                              <th>#</th>
                               <th>Nombre</th>
-                              <th>Categoria</th>
                               <th>Estado</th>
-                              <th class="text-center">Actions</th>
+                              <th>Acción</th>
                           </tr>
                       </thead>
                       <tfoot>
                           <tr>
+                              <th>#</th>
                               <th>Nombre</th>
-                              <th>Categoria</th>
                               <th>Estado</th>
-                              <th class="text-center">Actions</th>
+                              <th>Acción</th>
                           </tr>
                       </tfoot>
                       <tbody>

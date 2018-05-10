@@ -101,7 +101,8 @@
                                                                     <tr>
                                                                         <th class="text-center">#</th>
                                                                         <th>Name</th>
-                                                                        <th>Job Position</th>
+                                                                        <th>Rol de Trabajo</th>
+                                                                        <th>Acción</th>
 
                                                                     </tr>
                                                                 </thead>
@@ -112,6 +113,7 @@
                                                 echo "<td class='text-center'>{$y->idempleado}</td>";
                                                 echo "<td>{$y->clientemp->apellido}, {$y->clientemp->nombre}</td>";
                                                 echo "<td>{$y->puesto}</td>";
+                                                echo "<td><button class='btn btn-info btn-sm'>Ver</button><button class='btn btn-danger btn-sm'>Eliminar</button></td>";
                                             echo "</tr>";
                                         }
                                         ?>              
@@ -128,9 +130,6 @@
                             </div>
                         </div>
             </div>
-            <?php
-            include "../resources/partials/footer.php";
-            ?>
         </div>
     </div>
 </body>
