@@ -20,5 +20,10 @@ class usuario extends Model {
          'clave','remember_token'
      ];
 
+    public function usersalida () 
+     {
+       return $this->hasMany(salida::class); 
+     } 
+
 
 }

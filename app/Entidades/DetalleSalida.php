@@ -4,37 +4,31 @@ namespace App\Entidades;
 use Illuminate\Database\Eloquent\Model;
 
 class salida extends Model {
-    protected $table = 'salidas';
-    protected $primaryKey='idsalidas';
+    protected $table = 'detallesalida';
+    protected $primaryKey='iddetalle_salidas';
     public $timestamps=false;
     protected $fillable = [
-         'idofer_req',
-         'idusuario',
-         'idcliente',
-         'igv',
-         'fecha',
-         'estado',
-         'monto_deuda',
-         'monto_favor',
+         'idsalidas',
+         'idproducto',
+         'precioventa',
+         'cantidad',
+
     ];
 
     protected $guarded =[
 
     ];
 
-   public function salesclient() 
+   public function salida() 
      {
-     return $this->belongsTo(cliente::class, 'idcliente'); 
+     return $this->belongsTo(salida::class, 'idsalidas'); 
      } 
-   public function salesuser() 
+   public function producto() 
      {
-     return $this->belongsTo(usuario::class, 'idusuario'); 
+     return $this->belongsTo(producto::class, 'idproducto'); 
      } 
 
-   public function salidadetalle () 
-     {
-       return $this->hasMany(DetalleSalida::class); 
-     } 
+
 }
 
 /*

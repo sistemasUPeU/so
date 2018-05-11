@@ -21,9 +21,9 @@ include "../resources/partials/header.php";
                         <a class="navbar-brand" href="#"> Pedidos </a>
                     </div>
                     <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="main.php">
                                     <i class="material-icons">dashboard</i>
                                     <p class="hidden-lg hidden-md">Dashboard</p>
                                 </a>
@@ -34,9 +34,7 @@ include "../resources/partials/header.php";
                                     <p class="hidden-lg hidden-md">Opciones</p>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Editar Usuario</a>
-                                    </li>
+                              
                                     <li>
                                         <a href="logout.php">Cerrar Sesión</a>
                                     </li>
@@ -70,12 +68,7 @@ include "../resources/partials/header.php";
                                                     <div class="ripple-container"></div>
                                                 </a>
                                             </li>
-                                            <li class="">
-                                                <a href="#requestattend" data-toggle="tab">
-                                                    <i class="material-icons">code</i> Pedidos atendidos 
-                                                    <div class="ripple-container"></div>
-                                                </a>
-                                            </li>
+
                                             <li class="">
                                                 <a href="#requestwait" data-toggle="tab">
                                                     <i class="material-icons">cloud</i> Pedidos por atender
@@ -111,6 +104,7 @@ include "../resources/partials/header.php";
 
                                                 </thead>
                                                 <tbody>
+                                                    
                                                     <tr>
                                                         <td>1</td>
                                                         <td>Dakota Rice</td>
@@ -215,50 +209,8 @@ include "../resources/partials/header.php";
 
                                       </div> -->
                                   </div>
-                                  <div class="tab-pane" id="requestattend">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes" checked>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                                </td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="optionsCheckboxes">
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                        <i class="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="material-icons">close</i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-pane" id="requestwait">
+                                  
+                                  <div class="tab-pane" id="requestwait">
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead class="text-primary">
@@ -329,155 +281,161 @@ include "../resources/partials/header.php";
                                 <div class="tab-pane" id="newrequest">
 
                                     <div class="card">
-                                        <div class="card-header" data-background-color="purple">
-                                            <h4 class="title">Cliente</h4>
-                                            <p class="category">Complete your profile</p>
+                                        <div class="card-header" data-background-color="#018786">
+                                            <h4 class="title">Operaciones</h4>
+                                            <!-- <p class="category">Complete your profile</p> -->
                                         </div>
                                         <div class="card-content">
                                             <form>
                                                 <div class="row">
 
 
-                                                    <div class="col-md-3">
-                                                        <div class="form-group label-floating">
-                                                            <label class="control-label">Username</label>
-                                                            <input type="text" class="form-control" disabled>
+                                                   
 
-                                                        </div>
-
-
-                                                    </div>
-                                                    <div class="col-md-3">
-
-                                                        <button type="button" class="btn btn-round btn-primary">Buscar cliente <i class="material-icons">search
-                                                        </i></button>
-
-                                                    </div>
                                                     <div class="col-md-4">
-                                                        <button type="button" class="btn btn-round btn-info" data-toggle="modal"
-                                                        data-target="#productosearch">Agregar producto <i class="material-icons">add
-                                                        </i></button>
-                                                        
-                                                    </div>
+                                                        <div class="form-group has-default label-floating">
+                                                            <label class="control-label">Nombre</label>
+                                                            <select class="form-control" title="Cliente" name="idcliente">
+                                                               <!--  <?php
+                                                                foreach ($cate as $c){
+                                                                  echo "<option value='{$c->idcategoria}'>{$c->nombrecat}</option>";
+                                                              }
+                                                              ?> -->
+                                                          </select>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-3">
+
+                                                    <button type="button" class="btn btn-round btn-primary">Cliente nuevo <i class="material-icons">add
+                                                    </i></button>
+
                                                 </div>
+                                                <div class="col-md-4">
+                                                    <button type="button" class="btn btn-round btn-info" data-toggle="modal"
+                                                    data-target="#productosearch">Agregar producto <i class="material-icons">add
+                                                    </i></button>
 
-                                                
-                                                
-                                            </form>
-                                        </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </form>
                                     </div>
+                                </div>
 
 
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="text-primary">
-                                                <th>Nro</th>
-                                                <th>Articulo</th>
-                                                <th>P. venta</th>
-                                                <th>Cantidad</th>
-                                                <th>Descuento</th>
-                                                <th>Operaciones</th>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>Nro</th>
+                                            <th>Articulo</th>
+                                            <th>P. venta</th>
+                                            <th>Cantidad</th>
+                                            <th>Descuento</th>
+                                            <th>Operaciones</th>
 
 
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Dakota Rice</td>
-                                                    <td>S/. 13.00</td>
-                                                    <td>3</td>
-                                                    <td>0.00</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-primary"><i class="material-icons">receipt
-                                                        </i></button>
-                                                        <button type="button" class="btn btn-success"><i class="material-icons">add_shopping_cart
-                                                        </i></button>
-                                                        <button type="button" class="btn btn-danger"><i class="material-icons">close
-                                                        </i></button>
-                                                        
+                                        </thead>
+                                        <tbody>
+                                            
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Dakota Rice</td>
+                                                <td>S/. 13.00</td>
+                                                <td>3</td>
+                                                <td>0.00</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary"><i class="material-icons">receipt
+                                                    </i></button>
+                                                    <button type="button" class="btn btn-success"><i class="material-icons">add_shopping_cart
+                                                    </i></button>
+                                                    <button type="button" class="btn btn-danger"><i class="material-icons">close
+                                                    </i></button>
 
-                                                    </td>
+
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Minerva Hooper</td>
+                                                <td>S/. 5.00</td>
+                                                <td>1</td>
+                                                <td>0.00</td>
+
+                                                <td> 
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                                                        <i class="material-icons">receipt
+                                                        </i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="material-icons">close
+                                                        </i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Sell" class="btn btn-success btn-simple btn-xs">
+                                                        <i class="material-icons">add_shopping_cart
+                                                        </i>
+                                                    </button></td>
 
                                                 </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Minerva Hooper</td>
-                                                    <td>S/. 5.00</td>
-                                                    <td>1</td>
-                                                    <td>0.00</td>
 
-                                                    <td> 
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
-                                                            <i class="material-icons">receipt
-                                                            </i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                            <i class="material-icons">close
-                                                            </i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Sell" class="btn btn-success btn-simple btn-xs">
-                                                            <i class="material-icons">add_shopping_cart
-                                                            </i>
-                                                        </button></td>
-
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary pull-right">Guardar pedido</button>
-                                        <button type="submit" class="btn btn-primary pull-right">Cancelar</button>
-                                        <div class="clearfix"></div>
+                                            </tbody>
+                                        </table>
                                     </div>
+
+                                    <button type="submit" class="btn btn-primary pull-right">Guardar pedido</button>
+                                    <button type="submit" class="btn btn-primary pull-right">Cancelar</button>
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php
-
-                include "../resources/vista/pedidos/modalpedidos.php";
-                include "../resources/vista/pedidos/atenderpedido.php";
-                ?>
-
-            </body>
+            </div>
             <?php
-            include "../resources/partials/scripts.php";
+
+            include "../resources/vista/pedidos/modalpedidos.php";
+            include "../resources/vista/pedidos/atenderpedido.php";
             ?>
-            <script>
-                var data = {
-                  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                  series: [
-                  [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-                  [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-                  ]
-              };
 
-              var options = {
-                  seriesBarDistance: 15
-              };
+        </body>
+        <?php
+        include "../resources/partials/scripts.php";
+        ?>
+        <script>
+            var data = {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              series: [
+              [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+              [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+              ]
+          };
 
-              var responsiveOptions = [
-              ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                seriesBarDistance: 10,
-                axisX: {
-                  labelInterpolationFnc: function (value) {
-                    return value;
-                }
-            }
-        }],
-        ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
+          var options = {
+              seriesBarDistance: 15
+          };
+
+          var responsiveOptions = [
+          ['screen and (min-width: 641px) and (max-width: 1024px)', {
+            seriesBarDistance: 10,
             axisX: {
               labelInterpolationFnc: function (value) {
-                return value[0];
+                return value;
             }
         }
-    }]
-    ];
+    }],
+    ['screen and (max-width: 640px)', {
+        seriesBarDistance: 5,
+        axisX: {
+          labelInterpolationFnc: function (value) {
+            return value[0];
+        }
+    }
+}]
+];
 
-    new Chartist.Bar('#myChart', data, options, responsiveOptions);
+new Chartist.Bar('#myChart', data, options, responsiveOptions);
 </script>
 <script type="text/javascript">
 

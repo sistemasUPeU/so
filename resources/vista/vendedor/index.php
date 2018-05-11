@@ -24,7 +24,7 @@ include "../resources/partials/header.php";
 
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="main.php">
                                     <i class="material-icons">dashboard</i>
                                     <p class="hidden-lg hidden-md">Dashboard</p>
                                 </a>
@@ -36,7 +36,7 @@ include "../resources/partials/header.php";
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Editar Usuario</a>
+                                        <a href="main.php">Editar Usuario</a>
                                     </li>
                                     <li>
                                         <a href="logout.php">Cerrar Sesión</a>

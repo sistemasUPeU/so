@@ -7,8 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
-    <link rel="icon" href="../assets/img/favicon.png">
+    <!-- <link rel="apple-touch-icon" href="../assets/img/apple-icon.png"> -->
+   <!--  <link rel="icon" href="../assets/img/favicon.png"> -->
     <title>
         Login &#45; D' Vinita
     </title>
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div class="input-group">
+                                <div class="input-group ">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="material-icons">face</i>
@@ -70,7 +70,7 @@
                                             <i class="material-icons">lock_outline</i>
                                         </span>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="Contraseña..." name="pass">
+                                    <input type="password"   class="form-control" placeholder="Contraseña..." name="pass">
                                 </div>
                                 <!-- If you want to add a checkbox to this form, uncomment this code
 
